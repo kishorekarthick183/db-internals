@@ -72,6 +72,11 @@ impl Page {
     pub(crate) fn as_bytes(&self) -> &[u8] {
         &self.data
     }
+
+    pub(crate) fn as_bytes_mut(&mut self) -> &mut [u8] {
+        &mut self.data
+    }
+
     pub(crate) fn from_bytes(data: [u8; PAGE_SIZE]) -> Self {
         Self { data }
     }
